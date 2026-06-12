@@ -31,6 +31,7 @@ Posts are stored in memory and are lost when the server restarts. There is no au
 ```bash
 npm install
 node index.js
+```
 
 ## Future Plans
 
