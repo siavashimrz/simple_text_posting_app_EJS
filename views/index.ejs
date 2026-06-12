@@ -1,0 +1,20 @@
+<%- include("partials/header.ejs") %>
+
+    <% if (locals.db && locals.db.length !==0) { %>
+        <div class="blog-mini">
+            <h1>Blogs</h1>
+            <div class="blog-mini-container">
+                <%- include("partials/blog_mini.ejs") %>
+            </div>
+        </div>
+        <% } else { %>
+            <div class="noblog">
+                <h1>
+                    Start Creating Your First Blog!
+                </h1>
+                <a href="/create">+ Create a blog</a>
+            </div>
+            <% } %>
+
+
+                <%- include("partials/footer.ejs") %>

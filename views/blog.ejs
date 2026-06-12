@@ -1,0 +1,25 @@
+<%- include("partials/header.ejs") %>
+
+    <div class="blog">
+        <div class="blog-container">
+            <h2 class="blog-title">
+                <%=blog.bTitle%>
+            </h2>
+            <p class="blog-content">
+                <%=blog.bText%>
+            </p>
+            <div class="blog-footer">
+                <p class="blog-date">
+                    <%=blog.bDate%>
+                </p>
+                <div class="btn-group btn-group-blog">
+                    <a href="/blog/<%= blog.bID %>/edit" class="edit-btn">✒ Edit</a>
+                    <form action="/blog/<%= blog.bID %>/delete" method="post">
+
+                        <button type="submit" class="delete-btn" onclick="return confirm('Delete?')">✖ Delete</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%- include("partials/footer.ejs") %>

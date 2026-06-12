@@ -1,0 +1,23 @@
+<% db.forEach((blog)=>{ %>
+
+
+    <div class="blog-mini-box">
+        <h2 class="blog-mini-title">
+            <a href="/blog/<%= blog.bID %>">
+                <%= blog.bTitle %>
+            </a>
+        </h2>
+        <p>
+            <%= blog.bDate %>
+
+        </p>
+        <div class="btn-group">
+            <a href="/blog/<%= blog.bID %>/edit" class="edit-btn">✒ Edit</a>
+            <form action="/blog/<%= blog.bID %>/delete" method="post">
+
+                <button type="submit" class="delete-btn" onclick="return confirm('Delete?')">✖ Delete</button>
+            </form>
+        </div>
+    </div>
+
+    <% }) %>
